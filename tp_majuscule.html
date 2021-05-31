@@ -9,7 +9,8 @@
 <body>
     <div id="app">
         <input v-model="info">
-        <h3>{{ majuscule() }}</h3>
+        <button @click="affiche()"> OK </button>
+        <h3>{{ titre }}</h3>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -19,11 +20,13 @@
             el:'#app',
             data :{
                 info:'Saisir des minuscules',
+                titre: '',
             },
             methods:
 		    {
-                majuscule(){
-                    return this.info.toUpperCase();
+
+                affiche(){
+                    this.titre = this.info.toUpperCase();
                 }
             }
         }
