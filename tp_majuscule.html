@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Majuscule</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model="info">
+        <h3>{{ majuscule() }}</h3>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        const app = new Vue(
+        {
+            el:'#app',
+            data :{
+                info:'Saisir des minuscules',
+            },
+            methods:
+		    {
+                majuscule(){
+                    return this.info.toUpperCase();
+                }
+            }
+        }
+        );
+    </script>
+
+</body>
+</html>
